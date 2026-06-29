@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+<div align="center">
+  <br />
+    <a href="https://app-one-sigma-78.vercel.app/" target="_blank">
+      <img src="https://img.shields.io/badge/Live_Demo-View_Project-FF4500?style=for-the-badge&logo=vercel" alt="Live Demo" />
+    </a>
+  <br />
+  <br />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <h1>🎨 Design Your World (Digital Assets Marketplace)</h1>
+  
+  <p>
+    A premium, highly animated digital assets and templates marketplace template generated entirely using Kimi AI. Features complex GSAP scroll animations, Lenis smooth scrolling, and an extensive custom Shadcn UI component architecture.
+  </p>
+</div>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- **Ultra-Modern UI/UX**: Designed with a focus on skeuomorphic elements and premium aesthetics.
+- **GSAP Scroll Animations**: Complex timeline animations and reveal effects for maximum engagement.
+- **Smooth Scrolling**: Integrated Lenis for buttery-smooth scrolling experiences.
+- **Advanced State Management**: Built with Zustand for global state (Cart, Wishlist).
+- **Responsive Architecture**: Fully responsive across mobile, tablet, and desktop viewports.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💻 Tech Stack
 
-## Expanding the ESLint configuration
+| Technology | Description |
+|------------|-------------|
+| **React & Vite** | Core frontend framework and fast bundler |
+| **TypeScript** | Type-safe development |
+| **Tailwind CSS** | Utility-first styling engine |
+| **GSAP & Lenis** | Professional animation and smooth scrolling |
+| **Zustand** | Lightweight global state management |
+| **Shadcn UI** | Customizable accessible components |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Installation & Setup
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sahariarhossain524-sketch/Design-Your-World-Digital-Assets-.git
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. **Navigate to the directory**
+   ```bash
+   cd Design-Your-World-Digital-Assets-
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. **Install dependencies**
+   ```bash
+   npm install --legacy-peer-deps
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🌐 Live Demo
+Check out the live deployment here: [https://app-one-sigma-78.vercel.app/](https://app-one-sigma-78.vercel.app/)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<hr />
+<div align="center">
+  <sub>Built by <b>Sahariar Hossain</b> (AI-Assisted Full Stack Developer)</sub>
+</div>
