@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 18 90% 71%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 226 60% 68%;
+    --secondary-foreground: 0 0% 15%;
+    --muted: 30 100% 97%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 121 100% 89%;
+    --accent-foreground: 0 0% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 78%;
+    --input: 0 0% 78%;
+    --ring: 233 78% 44%;
+    --radius: 0.5rem;
+    --font-display: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: auto;
+    font-size: 16px;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #262626;
+    background: #FFF6EE;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.95;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(180deg,
+      #9BD6FF 0%,
+      #F89B72 5%,
+      #7C93E0 15%,
+      #F89B72 25%,
+      #F89B72 40%,
+      #C8FFCA 65%,
+      #FFF6EE 80%,
+      #F89B72 90%,
+      #192EC6 100%
+    );
+  }
+
+  .gradient-text-fill {
+    background-image: linear-gradient(to right, #262626 30%, #F89B72 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-lg text-sm font-semibold uppercase text-white transition-all duration-300;
+    background: linear-gradient(135deg, #F89B72, #F88953);
+  }
+  .btn-primary:hover {
+    box-shadow: inset 0 0 0 1px #FFF2E2, 0 0 0 3px #F89B72;
+  }
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-2.5 rounded-lg text-sm font-semibold uppercase border-2 transition-all duration-300;
+    border-color: #F89B72;
+    color: #F89B72;
+  }
+  .btn-secondary:hover {
+    background: #F89B72;
+    color: white;
+  }
+
+  .category-tag {
+    @apply inline-block px-3 py-1 text-[10px] font-semibold uppercase rounded;
+  }
+
+  .section-heading {
+    @apply text-5xl md:text-6xl font-bold uppercase;
+    font-family: var(--font-display);
+  }
+
+  .skeleton-shimmer {
+    background: linear-gradient(90deg, #F0F0F0 25%, #E8E8E8 50%, #F0F0F0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  @keyframes marquee-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes marquee-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes search-glow {
+    0%, 100% { box-shadow: 0 4px 12px rgba(248,155,114,0.15); }
+    50% { box-shadow: 0 4px 24px rgba(248,155,114,0.25); }
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 0% 4%; }
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF6EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #F89B72;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F88953;
+}
+
+/* Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
